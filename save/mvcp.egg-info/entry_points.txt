@@ -1,0 +1,6 @@
+[gui_scripts]
+mvcp = mvcp:main
+
+[qtpyvcp.vcp]
+mvcp = mvcp
+

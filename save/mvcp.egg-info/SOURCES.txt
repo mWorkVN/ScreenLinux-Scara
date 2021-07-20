@@ -1,0 +1,16 @@
+MANIFEST.in
+README.md
+setup.py
+mvcp/__init__.py
+mvcp/__init__.py.bak
+mvcp/config.yml
+mvcp/config.yml.bak
+mvcp/mainwindow.py
+mvcp.egg-info/PKG-INFO
+mvcp.egg-info/SOURCES.txt
+mvcp.egg-info/dependency_links.txt
+mvcp.egg-info/entry_points.txt
+mvcp.egg-info/top_level.txt
+mvcp/resources/resources.qrc
+mvcp/ui/mainwindow.ui
+mvcp/ui/style.qss

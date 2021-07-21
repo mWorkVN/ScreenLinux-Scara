@@ -25,6 +25,17 @@ data_plugins:
   status:
     kwargs:
       cycle_time: 75
+  notifications:
+    provider: qtpyvcp.plugins.notifications:Notifications
+    kwargs:
+      # show notification popups
+      enabled: True
+      # "native" or "dbus"
+      mode: dbus
+      # max number of notifications to show
+      max_messages: 
+      # whether to save messages on exit
+      persistent: True
 
 windows:
 

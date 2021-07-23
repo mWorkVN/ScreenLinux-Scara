@@ -1,4 +1,5 @@
 from qtpyvcp.widgets.form_widgets.main_window import VCPMainWindow
+from qtpyvcp.plugins.notifications import Notifications
 from qtpyvcp.actions.machine_actions import issue_mdi
 # Setup logging
 from qtpyvcp.utilities import logger
@@ -8,6 +9,7 @@ class MyMainWindow(VCPMainWindow):
     """Main window class for the VCP."""
     def __init__(self, *args, **kwargs):
         super(MyMainWindow, self).__init__(*args, **kwargs)
+        Notifications.max_messages = 10
         self.btnRunM428.clicked.connect(self.runM428)
         self.btnRunM429.clicked.connect(self.runM429)
     def runM428(self):

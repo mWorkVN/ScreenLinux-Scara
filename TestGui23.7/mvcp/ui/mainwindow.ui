@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1280</width>
+    <width>1096</width>
     <height>876</height>
    </rect>
   </property>
@@ -173,16 +173,6 @@ font: 14pt &quot;DejaVu Sans&quot;; }</string>
                   </widget>
                  </item>
                  <item>
-                  <widget class="ActionButton" name="zView">
-                   <property name="text">
-                    <string>Z</string>
-                   </property>
-                   <property name="actionName" stdset="0">
-                    <string/>
-                   </property>
-                  </widget>
-                 </item>
-                 <item>
                   <widget class="ActionButton" name="zoomViewIn">
                    <property name="text">
                     <string>+</string>
@@ -237,7 +227,7 @@ font: 14pt &quot;DejaVu Sans&quot;; }</string>
              <bool>true</bool>
             </property>
             <property name="toolTipDuration">
-             <number>-4</number>
+             <number>5</number>
             </property>
             <property name="styleSheet">
              <string notr="true">QTabBar::tab {
@@ -248,7 +238,7 @@ font: 14pt &quot;DejaVu Sans&quot;; }</string>
              <enum>QTabWidget::South</enum>
             </property>
             <property name="currentIndex">
-             <number>0</number>
+             <number>1</number>
             </property>
             <widget class="QWidget" name="tab_3">
              <attribute name="title">
@@ -301,7 +291,7 @@ border: 5px solid rgb(136, 138, 133);
                   <rect>
                    <x>10</x>
                    <y>10</y>
-                   <width>461</width>
+                   <width>431</width>
                    <height>288</height>
                   </rect>
                  </property>
@@ -324,6 +314,35 @@ border: 5px solid rgb(136, 138, 133);
                   <property name="horizontalSpacing">
                    <number>12</number>
                   </property>
+                  <item row="3" column="1">
+                   <widget class="HalLabel" name="hallabel_3">
+                    <property name="frameShape">
+                     <enum>QFrame::NoFrame</enum>
+                    </property>
+                    <property name="text">
+                     <string>Z</string>
+                    </property>
+                    <property name="margin">
+                     <number>10</number>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="1" column="1">
+                   <widget class="HalLabel" name="hallabel_2">
+                    <property name="frameShape">
+                     <enum>QFrame::NoFrame</enum>
+                    </property>
+                    <property name="text">
+                     <string>Y</string>
+                    </property>
+                    <property name="margin">
+                     <number>10</number>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="4" column="5">
+                   <widget class="LEDButton" name="ledbutton"/>
+                  </item>
                   <item row="1" column="2">
                    <widget class="DROWidget" name="drowidget_2">
                     <property name="referenceType" stdset="0">
@@ -374,16 +393,6 @@ border: 5px solid rgb(136, 138, 133);
                     </property>
                     <property name="actionName" stdset="0">
                      <string>machine.jog.axis:c,pos</string>
-                    </property>
-                   </widget>
-                  </item>
-                  <item row="1" column="5">
-                   <widget class="ActionButton" name="actionbutton_18">
-                    <property name="text">
-                     <string>X+</string>
-                    </property>
-                    <property name="actionName" stdset="0">
-                     <string>machine.jog.axis:x,pos</string>
                     </property>
                    </widget>
                   </item>
@@ -463,32 +472,6 @@ border: 5px solid rgb(136, 138, 133);
                     </property>
                    </widget>
                   </item>
-                  <item row="3" column="1">
-                   <widget class="HalLabel" name="hallabel_3">
-                    <property name="frameShape">
-                     <enum>QFrame::NoFrame</enum>
-                    </property>
-                    <property name="text">
-                     <string>Z</string>
-                    </property>
-                    <property name="margin">
-                     <number>10</number>
-                    </property>
-                   </widget>
-                  </item>
-                  <item row="1" column="1">
-                   <widget class="HalLabel" name="hallabel_2">
-                    <property name="frameShape">
-                     <enum>QFrame::NoFrame</enum>
-                    </property>
-                    <property name="text">
-                     <string>Y</string>
-                    </property>
-                    <property name="margin">
-                     <number>10</number>
-                    </property>
-                   </widget>
-                  </item>
                   <item row="1" column="3">
                    <widget class="ActionButton" name="actionbutton_10">
                     <property name="enabled">
@@ -518,8 +501,31 @@ border: 5px solid rgb(136, 138, 133);
                     </property>
                    </widget>
                   </item>
-                  <item row="1" column="6">
-                   <widget class="ActionButton" name="actionbutton_19">
+                  <item row="2" column="5">
+                   <widget class="ActionButton" name="btnRunM428">
+                    <property name="enabled">
+                     <bool>false</bool>
+                    </property>
+                    <property name="text">
+                     <string>Z+</string>
+                    </property>
+                    <property name="actionName" stdset="0">
+                     <string/>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="3" column="5">
+                   <widget class="ActionButton" name="btnRunM429">
+                    <property name="text">
+                     <string>Z+</string>
+                    </property>
+                    <property name="actionName" stdset="0">
+                     <string/>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="1" column="5">
+                   <widget class="ActionButton" name="actionbutton_18">
                     <property name="text">
                      <string>X+</string>
                     </property>
@@ -528,85 +534,69 @@ border: 5px solid rgb(136, 138, 133);
                     </property>
                    </widget>
                   </item>
-                  <item row="4" column="5">
-                   <widget class="QPushButton" name="btnRunM428_2">
-                    <property name="text">
-                     <string>M428</string>
+                  <item row="1" column="6">
+                   <widget class="StatusLED" name="ledHomeX">
+                    <property name="color">
+                     <color>
+                      <red>115</red>
+                      <green>210</green>
+                      <blue>22</blue>
+                     </color>
                     </property>
-                    <property name="autoDefault">
-                     <bool>false</bool>
+                    <property name="rules" stdset="0">
+                     <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:joint.0.homed&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;On&quot;, &quot;expression&quot;: &quot;True if ch[0] else False&quot;, &quot;name&quot;: &quot;New Rule&quot;}]</string>
                     </property>
                    </widget>
                   </item>
-                  <item row="3" column="5">
-                   <widget class="QPushButton" name="btnRunM428">
-                    <property name="text">
-                     <string>M429</string>
+                  <item row="2" column="6">
+                   <widget class="StatusLED" name="statusled_3">
+                    <property name="color">
+                     <color>
+                      <red>115</red>
+                      <green>210</green>
+                      <blue>22</blue>
+                     </color>
+                    </property>
+                    <property name="rules" stdset="0">
+                     <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:joint.1.homed&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;On&quot;, &quot;expression&quot;: &quot;True if ch[0] else False&quot;, &quot;name&quot;: &quot;New Rule&quot;}]</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="3" column="6">
+                   <widget class="StatusLED" name="statusled_4">
+                    <property name="color">
+                     <color>
+                      <red>115</red>
+                      <green>210</green>
+                      <blue>22</blue>
+                     </color>
+                    </property>
+                    <property name="rules" stdset="0">
+                     <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:joint.2.homed&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;On&quot;, &quot;expression&quot;: &quot;True if ch[0] else False&quot;, &quot;name&quot;: &quot;New Rule&quot;}]</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="4" column="6">
+                   <widget class="StatusLED" name="statusled_5">
+                    <property name="color">
+                     <color>
+                      <red>115</red>
+                      <green>210</green>
+                      <blue>22</blue>
+                     </color>
+                    </property>
+                    <property name="rules" stdset="0">
+                     <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:joint.3.homed&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;On&quot;, &quot;expression&quot;: &quot;True if ch[0] else False&quot;, &quot;name&quot;: &quot;New Rule&quot;}]</string>
                     </property>
                    </widget>
                   </item>
                  </layout>
                 </widget>
-                <widget class="ActionSlider" name="actionslider">
-                 <property name="geometry">
-                  <rect>
-                   <x>10</x>
-                   <y>330</y>
-                   <width>401</width>
-                   <height>50</height>
-                  </rect>
-                 </property>
-                 <property name="acceptDrops">
-                  <bool>false</bool>
-                 </property>
-                 <property name="statusTip">
-                  <string/>
-                 </property>
-                 <property name="accessibleDescription">
-                  <string/>
-                 </property>
-                 <property name="autoFillBackground">
-                  <bool>false</bool>
-                 </property>
-                 <property name="inputMethodHints">
-                  <set>Qt::ImhNone</set>
-                 </property>
-                 <property name="maximum">
-                  <number>5000</number>
-                 </property>
-                 <property name="pageStep">
-                  <number>2000</number>
-                 </property>
-                 <property name="sliderPosition">
-                  <number>4</number>
-                 </property>
-                 <property name="tracking">
-                  <bool>false</bool>
-                 </property>
-                 <property name="orientation">
-                  <enum>Qt::Horizontal</enum>
-                 </property>
-                 <property name="invertedAppearance">
-                  <bool>false</bool>
-                 </property>
-                 <property name="invertedControls">
-                  <bool>false</bool>
-                 </property>
-                 <property name="tickPosition">
-                  <enum>QSlider::TicksBelow</enum>
-                 </property>
-                 <property name="tickInterval">
-                  <number>0</number>
-                 </property>
-                 <property name="actionName" stdset="0">
-                  <string>machine.jog.set-linear-speed</string>
-                 </property>
-                </widget>
                 <widget class="ActionSlider" name="actionslider_2">
                  <property name="geometry">
                   <rect>
-                   <x>10</x>
-                   <y>400</y>
+                   <x>20</x>
+                   <y>300</y>
                    <width>401</width>
                    <height>50</height>
                   </rect>
@@ -654,7 +644,48 @@ border: 5px solid rgb(136, 138, 133);
                   <number>0</number>
                  </property>
                  <property name="actionName" stdset="0">
-                  <string>machine.jog.set-linear-speed</string>
+                  <string>machine.jog.set_angular_speed</string>
+                 </property>
+                </widget>
+                <widget class="StatusLED" name="statusled">
+                 <property name="geometry">
+                  <rect>
+                   <x>460</x>
+                   <y>30</y>
+                   <width>38</width>
+                   <height>38</height>
+                  </rect>
+                 </property>
+                 <property name="diameter">
+                  <number>38</number>
+                 </property>
+                 <property name="flashing">
+                  <bool>true</bool>
+                 </property>
+                 <property name="rules" stdset="0">
+                  <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:estop&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;On&quot;, &quot;expression&quot;: &quot;False if ch[0] else True&quot;, &quot;name&quot;: &quot;New Rule&quot;}]</string>
+                 </property>
+                </widget>
+                <widget class="ActionSlider" name="actionslider_4">
+                 <property name="geometry">
+                  <rect>
+                   <x>20</x>
+                   <y>360</y>
+                   <width>281</width>
+                   <height>50</height>
+                  </rect>
+                 </property>
+                 <property name="maximum">
+                  <number>400</number>
+                 </property>
+                 <property name="singleStep">
+                  <number>4</number>
+                 </property>
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                 </property>
+                 <property name="actionName" stdset="0">
+                  <string>machine.jog.set_linear_speed</string>
                  </property>
                 </widget>
                </widget>
@@ -665,27 +696,396 @@ border: 5px solid rgb(136, 138, 133);
              <attribute name="title">
               <string>dd</string>
              </attribute>
-             <widget class="QWidget" name="verticalLayoutWidget">
+             <widget class="VCPSettingsDoubleSpinBox" name="settings_spinbox">
+              <property name="geometry">
+               <rect>
+                <x>20</x>
+                <y>50</y>
+                <width>371</width>
+                <height>25</height>
+               </rect>
+              </property>
+              <property name="buttonSymbols">
+               <enum>QAbstractSpinBox::NoButtons</enum>
+              </property>
+              <property name="correctionMode">
+               <enum>QAbstractSpinBox::CorrectToNearestValue</enum>
+              </property>
+              <property name="suffix">
+               <string> in</string>
+              </property>
+              <property name="decimals">
+               <number>4</number>
+              </property>
+              <property name="rules" stdset="0">
+               <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:aout&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Value&quot;, &quot;expression&quot;: &quot;ch[0][0]&quot;, &quot;name&quot;: &quot;New Rule&quot;}]</string>
+              </property>
+              <property name="settingName" stdset="0">
+               <string>touch-probe.diameter-offset</string>
+              </property>
+             </widget>
+             <widget class="VCPSettingsSpinBox" name="vcpsettingsSpinBox">
+              <property name="geometry">
+               <rect>
+                <x>20</x>
+                <y>20</y>
+                <width>401</width>
+                <height>25</height>
+               </rect>
+              </property>
+              <property name="showGroupSeparator" stdset="0">
+               <bool>false</bool>
+              </property>
+              <property name="suffix">
+               <string> %</string>
+              </property>
+              <property name="settingName" stdset="0">
+               <string/>
+              </property>
+             </widget>
+             <widget class="VCPSettingsCheckBox" name="settings_checkbox">
+              <property name="geometry">
+               <rect>
+                <x>30</x>
+                <y>80</y>
+                <width>121</width>
+                <height>23</height>
+               </rect>
+              </property>
+              <property name="text">
+               <string>Jog Continuous</string>
+              </property>
+              <property name="settingName" stdset="0">
+               <string>machine.jog.mode-incremental</string>
+              </property>
+             </widget>
+             <widget class="StatusLabel" name="statuslabel_15">
+              <property name="geometry">
+               <rect>
+                <x>16</x>
+                <y>237</y>
+                <width>618</width>
+                <height>17</height>
+               </rect>
+              </property>
+              <property name="rules" stdset="0">
+               <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;position:rel?string&amp;axis=x&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;ch[0]&quot;, &quot;name&quot;: &quot;New Rule&quot;}]</string>
+              </property>
+             </widget>
+             <widget class="ActionButton" name="actionbutton_19">
+              <property name="geometry">
+               <rect>
+                <x>350</x>
+                <y>290</y>
+                <width>72</width>
+                <height>58</height>
+               </rect>
+              </property>
+              <property name="text">
+               <string>Z+</string>
+              </property>
+              <property name="actionName" stdset="0">
+               <string>machine.jog.axis:z,pos</string>
+              </property>
+             </widget>
+             <widget class="ActionButton" name="actionbutton_20">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
+              <property name="geometry">
+               <rect>
+                <x>265</x>
+                <y>150</y>
+                <width>73</width>
+                <height>58</height>
+               </rect>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>52</width>
+                <height>52</height>
+               </size>
+              </property>
+              <property name="text">
+               <string>X-</string>
+              </property>
+              <property name="actionName" stdset="0">
+               <string>machine.jog.axis:x,neg</string>
+              </property>
+             </widget>
+             <widget class="ActionButton" name="actionbutton_21">
+              <property name="geometry">
+               <rect>
+                <x>265</x>
+                <y>220</y>
+                <width>73</width>
+                <height>58</height>
+               </rect>
+              </property>
+              <property name="text">
+               <string>Y-</string>
+              </property>
+              <property name="actionName" stdset="0">
+               <string>machine.jog.axis:y,neg</string>
+              </property>
+             </widget>
+             <widget class="ActionButton" name="actionbutton_22">
+              <property name="geometry">
+               <rect>
+                <x>350</x>
+                <y>150</y>
+                <width>72</width>
+                <height>58</height>
+               </rect>
+              </property>
+              <property name="text">
+               <string>X+</string>
+              </property>
+              <property name="actionName" stdset="0">
+               <string>machine.jog.axis:x,pos</string>
+              </property>
+             </widget>
+             <widget class="ActionButton" name="actionbutton_23">
+              <property name="geometry">
+               <rect>
+                <x>265</x>
+                <y>290</y>
+                <width>73</width>
+                <height>58</height>
+               </rect>
+              </property>
+              <property name="text">
+               <string>Z-</string>
+              </property>
+              <property name="actionName" stdset="0">
+               <string>machine.jog.axis:z,neg</string>
+              </property>
+             </widget>
+             <widget class="DROWidget" name="drowidget_6">
+              <property name="geometry">
+               <rect>
+                <x>168</x>
+                <y>220</y>
+                <width>85</width>
+                <height>58</height>
+               </rect>
+              </property>
+              <property name="referenceType" stdset="0">
+               <enum>DROWidget::Relative</enum>
+              </property>
+              <property name="axis" stdset="0">
+               <enum>DROWidget::Y</enum>
+              </property>
+             </widget>
+             <widget class="DROWidget" name="drowidget_7">
+              <property name="geometry">
+               <rect>
+                <x>168</x>
+                <y>290</y>
+                <width>85</width>
+                <height>58</height>
+               </rect>
+              </property>
+              <property name="referenceType" stdset="0">
+               <enum>DROWidget::Relative</enum>
+              </property>
+              <property name="axis" stdset="0">
+               <enum>DROWidget::Z</enum>
+              </property>
+             </widget>
+             <widget class="ActionButton" name="actionbutton_24">
+              <property name="geometry">
+               <rect>
+                <x>350</x>
+                <y>220</y>
+                <width>72</width>
+                <height>58</height>
+               </rect>
+              </property>
+              <property name="text">
+               <string>Y+</string>
+              </property>
+              <property name="actionName" stdset="0">
+               <string>machine.jog.axis:y,pos</string>
+              </property>
+             </widget>
+             <widget class="DROWidget" name="drowidget_8">
+              <property name="geometry">
+               <rect>
+                <x>168</x>
+                <y>150</y>
+                <width>85</width>
+                <height>58</height>
+               </rect>
+              </property>
+              <property name="referenceType" stdset="0">
+               <enum>DROWidget::Relative</enum>
+              </property>
+             </widget>
+             <widget class="StatusLabel" name="statuslabel_2">
+              <property name="geometry">
+               <rect>
+                <x>16</x>
+                <y>263</y>
+                <width>302</width>
+                <height>17</height>
+               </rect>
+              </property>
+              <property name="rules" stdset="0">
+               <string notr="true">[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:estop&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;\&quot;Estoped: \&quot; + str(ch[0])&quot;, &quot;name&quot;: &quot;New Rule&quot;}]</string>
+              </property>
+             </widget>
+             <widget class="StatusLabel" name="statuslabel_24">
+              <property name="geometry">
+               <rect>
+                <x>20</x>
+                <y>430</y>
+                <width>618</width>
+                <height>17</height>
+               </rect>
+              </property>
+              <property name="rules" stdset="0">
+               <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;settings:machine.jog.linear-speed-percentage&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;\&quot;Jog Speed: %i%%\&quot; % ch[0]&quot;, &quot;name&quot;: &quot;New Rule&quot;}]</string>
+              </property>
+             </widget>
+             <widget class="StatusLabel" name="statuslabel_19">
+              <property name="geometry">
+               <rect>
+                <x>10</x>
+                <y>150</y>
+                <width>171</width>
+                <height>17</height>
+               </rect>
+              </property>
+              <property name="rules" stdset="0">
+               <string notr="true">[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:program_units?string&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;\&quot;Progam Units: \&quot; + ch[0]&quot;, &quot;name&quot;: &quot;New Rule&quot;}]</string>
+              </property>
+             </widget>
+             <widget class="StatusLabel" name="statuslabel_6">
+              <property name="geometry">
+               <rect>
+                <x>16</x>
+                <y>285</y>
+                <width>302</width>
+                <height>17</height>
+               </rect>
+              </property>
+              <property name="rules" stdset="0">
+               <string notr="true">[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:motion_mode?string&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;\&quot;Motion Mode: \&quot; + ch[0]&quot;, &quot;name&quot;: &quot;New Rule&quot;}]</string>
+              </property>
+             </widget>
+             <widget class="StatusLabel" name="statuslabel_9">
+              <property name="geometry">
+               <rect>
+                <x>10</x>
+                <y>130</y>
+                <width>618</width>
+                <height>17</height>
+               </rect>
+              </property>
+              <property name="rules" stdset="0">
+               <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;settings:dro.display-units&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;\&quot;display-units: \&quot; + str(ch[0])&quot;, &quot;name&quot;: &quot;New Rule&quot;}]</string>
+              </property>
+             </widget>
+             <widget class="StatusLabel" name="statuslabel_7">
+              <property name="geometry">
+               <rect>
+                <x>16</x>
+                <y>307</y>
+                <width>302</width>
+                <height>17</height>
+               </rect>
+              </property>
+              <property name="rules" stdset="0">
+               <string notr="true">[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:task_state?string&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;\&quot;Task State: \&quot; + ch[0]&quot;, &quot;name&quot;: &quot;New Rule&quot;}]</string>
+              </property>
+             </widget>
+             <widget class="StatusLabel" name="statuslabel_11">
+              <property name="geometry">
+               <rect>
+                <x>16</x>
+                <y>373</y>
+                <width>151</width>
+                <height>17</height>
+               </rect>
+              </property>
+              <property name="rules" stdset="0">
+               <string notr="true">[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:file&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;\&quot;File: \&quot; + ch[0]&quot;, &quot;name&quot;: &quot;New Rule&quot;}]</string>
+              </property>
+             </widget>
+             <widget class="StatusLabel" name="statuslabel_8">
+              <property name="geometry">
+               <rect>
+                <x>16</x>
+                <y>329</y>
+                <width>302</width>
+                <height>17</height>
+               </rect>
+              </property>
+              <property name="rules" stdset="0">
+               <string notr="true">[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:interp_state?string&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;\&quot;Interp State: \&quot; + ch[0]&quot;, &quot;name&quot;: &quot;New Rule&quot;}]</string>
+              </property>
+             </widget>
+             <widget class="JogIncrementWidget" name="jogincrementwidget">
+              <property name="geometry">
+               <rect>
+                <x>430</x>
+                <y>40</y>
+                <width>80</width>
+                <height>284</height>
+               </rect>
+              </property>
+              <property name="orientation">
+               <enum>Qt::Vertical</enum>
+              </property>
+             </widget>
+             <widget class="StatusLabel" name="statuslabel_20">
+              <property name="geometry">
+               <rect>
+                <x>10</x>
+                <y>170</y>
+                <width>171</width>
+                <height>17</height>
+               </rect>
+              </property>
+              <property name="rules" stdset="0">
+               <string notr="true">[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:program_units?string&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;\&quot;Progam Units: \&quot; + ch[0]&quot;, &quot;name&quot;: &quot;New Rule&quot;}]</string>
+              </property>
+             </widget>
+             <widget class="HalLabel" name="hallabel_5">
               <property name="geometry">
                <rect>
                 <x>340</x>
-                <y>0</y>
-                <width>160</width>
-                <height>80</height>
+                <y>380</y>
+                <width>81</width>
+                <height>17</height>
                </rect>
               </property>
-              <layout class="QVBoxLayout" name="verticalLayout_3"/>
+              <property name="pinBaseName" stdset="0">
+               <string>valueSSI</string>
+              </property>
              </widget>
-             <widget class="MDIEntry" name="mdientry">
+             <widget class="HalLedIndicator" name="halledindicator_2">
               <property name="geometry">
                <rect>
-                <x>160</x>
-                <y>250</y>
-                <width>211</width>
-                <height>51</height>
+                <x>240</x>
+                <y>370</y>
+                <width>30</width>
+                <height>30</height>
                </rect>
               </property>
+              <property name="state">
+               <bool>false</bool>
+              </property>
+              <property name="pinBaseName" stdset="0">
+               <string>tamsss</string>
+              </property>
              </widget>
+            </widget>
+            <widget class="QWidget" name="tab_5">
+             <attribute name="title">
+              <string>Page</string>
+             </attribute>
             </widget>
            </widget>
           </item>
@@ -694,6 +1094,13 @@ border: 5px solid rgb(136, 138, 133);
        </item>
        <item>
         <widget class="QFrame" name="horizontalFrame">
+         <property name="styleSheet">
+          <string notr="true">ActionButton {
+min-height: 50px;
+min-width: 50px;
+font: 14pt &quot;DejaVu Sans&quot;;
+}</string>
+         </property>
          <property name="frameShape">
           <enum>QFrame::Box</enum>
          </property>
@@ -826,7 +1233,20 @@ All</string>
     </item>
    </layout>
   </widget>
-  <widget class="QStatusBar" name="statusbar"/>
+  <widget class="QStatusBar" name="statusbar">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+     <horstretch>100</horstretch>
+     <verstretch>100</verstretch>
+    </sizepolicy>
+   </property>
+   <property name="sizeGripEnabled">
+    <bool>false</bool>
+   </property>
+  </widget>
   <action name="actionExit">
    <property name="text">
     <string>Exit</string>
@@ -862,9 +1282,14 @@ All</string>
  </widget>
  <customwidgets>
   <customwidget>
-   <class>MDIEntry</class>
-   <extends>QLineEdit</extends>
-   <header>qtpyvcp.widgets.input_widgets.mdientry_widget</header>
+   <class>JogIncrementWidget</class>
+   <extends>QWidget</extends>
+   <header>qtpyvcp.widgets.input_widgets.jog_increment</header>
+  </customwidget>
+  <customwidget>
+   <class>VCPSettingsSpinBox</class>
+   <extends>QSpinBox</extends>
+   <header>qtpyvcp.widgets.input_widgets.setting_slider</header>
   </customwidget>
   <customwidget>
    <class>ActionSlider</class>
@@ -872,15 +1297,45 @@ All</string>
    <header>qtpyvcp.widgets.input_widgets.action_slider</header>
   </customwidget>
   <customwidget>
+   <class>VCPSettingsDoubleSpinBox</class>
+   <extends>QDoubleSpinBox</extends>
+   <header>qtpyvcp.widgets.input_widgets.setting_slider</header>
+  </customwidget>
+  <customwidget>
    <class>DROWidget</class>
    <extends>QLabel</extends>
    <header>qtpyvcp.widgets.display_widgets.dro_widget</header>
+  </customwidget>
+  <customwidget>
+   <class>StatusLabel</class>
+   <extends>QLabel</extends>
+   <header>qtpyvcp.widgets.display_widgets.status_label</header>
+  </customwidget>
+  <customwidget>
+   <class>StatusLED</class>
+   <extends>QWidget</extends>
+   <header>qtpyvcp.widgets.display_widgets.status_led</header>
+  </customwidget>
+  <customwidget>
+   <class>HalLedIndicator</class>
+   <extends>QWidget</extends>
+   <header>qtpyvcp.widgets.hal_widgets.hal_led</header>
   </customwidget>
   <customwidget>
    <class>GcodeBackplot</class>
    <extends>QWidget</extends>
    <header>qtpyvcp.widgets.display_widgets.gcode_backplot.gcode_backplot</header>
    <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>VCPSettingsCheckBox</class>
+   <extends>QCheckBox</extends>
+   <header>qtpyvcp.widgets.input_widgets.setting_slider</header>
+  </customwidget>
+  <customwidget>
+   <class>LEDButton</class>
+   <extends>ActionButton</extends>
+   <header>qtpyvcp.widgets.button_widgets.led_button</header>
   </customwidget>
   <customwidget>
    <class>ActionButton</class>
@@ -919,22 +1374,6 @@ All</string>
    <hints>
     <hint type="sourcelabel">
      <x>851</x>
-     <y>672</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>937</x>
-     <y>334</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>zView</sender>
-   <signal>clicked()</signal>
-   <receiver>gcodebackplot</receiver>
-   <slot>setViewZ()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>937</x>
      <y>672</y>
     </hint>
     <hint type="destinationlabel">
